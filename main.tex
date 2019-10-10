@@ -1,0 +1,178 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    bookmarks=true,
+    pdfpagemode=FullScreen,
+    }
+
+\title{POC Design}
+\author{Sophie Avard}
+\date{September 2019}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+Throughout the semester I have built on the work that I put forward in the Scoping and Elaboration exercises. As I have been continuously learning new methods for organising and analysing data, my PoC has adjusted overtime. What originally started off as a project aimed at coding data (as anthropologists would say) in order to develop connections between texts, has turned into a much larger project involving data organisation, coding/tagging, and referencing. As such, I will be using tools that were not outlined in my Elaboration. That being said, I am still in the process of developing digital skills so I expect that my PoC will continue to change as I progress in this unit.\\
+My PoC will focus on:
+\begin{itemize}
+    \item Storing multiple sources of data with relevant metadata
+    \item Finding connections between sources through annotations, highlights, text searches and tags
+    \item Exporting references into Overleaf 
+\end{itemize}
+The main tools that I will be using to complete my PoC are: Hypothes.is, OpenSemantics Desktop Search, and Zotero.\\ The tools that I will be using in order for my main tools to successfully function will be: VirtualBox, Zotfile, Zotero-Voyant-Export, and Better BibTex.
+
+\section{User Stories}
+In order to produce user stories that add value to my PoC I will use the guidelines below for each story.\\
+\includegraphics[width=\textwidth]{userstory.png}
+
+\subsection{Data Storage}
+As a student, I want to store multiple sources of data in a single location so that the metadata and reference can be located efficiently.
+
+As a student, I should be able to:
+\begin{itemize}
+    \item Store all my data in /Desktop/Thesis/Literature
+    \item Cause tool to add data to Zotero 
+    \item Click on each source to see metadata
+    \item Click on each source to see pdf
+\end{itemize}
+
+\subsubsection{Quality Assurance}
+For Zotero to be successful, each item should have the metadata and source stored in the library. The source can be either a website or pdf.
+
+\subsection{Data Organisation}
+As a student, I want all of my data named with the same format (consistent and descriptive) so that it is obvious where to find specific data and what the files contain.\\
+
+As a student, I should be able to:
+\begin{itemize}
+    \item Install Zotfile in Zotero 
+    \item Change automation settings to \verb|'lastname_year_title'|
+    \item Add source to Zotero
+\end{itemize}
+
+\subsubsection{Quality Assurance}
+For Zotfile to be successful, it must automatically rename items as \verb|'lastname_year_title'| when uploaded to Zotero.
+
+\subsection{Highlight Text}
+As a student, I want my data analysis tool to allow me to highlight text to help me organise themes and connections between sources.
+
+As a student, I should be able to:
+\begin{itemize}
+    \item Login to Hypothes.is in Chrome
+    \item Click file
+    \item Click open file
+    \item Select relevant pdf
+    \item Cause tool to highlight text
+    \item Save highlight 
+\end{itemize}
+
+\subsubsection{Quality Assurance} 
+For Hypothes.is to be successful I must be able to compare at least two highlighted texts.
+
+\subsection{Annotate Text}
+As a student, I want my data analysis tool to allow me to write my thoughts during reading so that I can read my ideas in the future.\\
+
+As a student, I should be able to:
+\begin{itemize}
+    \item Login to Hypothes.is in Chrome
+    \item Click file
+    \item Click open file 
+    \item Select relevant pdf
+    \item Cause tool to create annotation
+    \item Save annotation 
+\end{itemize}
+
+\subsubsection{Quality Assurance}
+For Hypothes.is to be successful I must be able to compare at least two annotated texts.
+
+\subsection{Import Highlights and Annotations}
+As a student, I want my data analysis tool to import my annotations from Hypothes.is so that I can store them on my computer for later analysis.
+
+As a student, I should be able to:
+\begin{itemize}
+    \item Login to Hypothes.is 
+    \item Click Settings
+    \item Click Developer 
+    \item Copy API token 
+    \item Open Virtual Box 
+    \item Launch Open Semantic 
+    \item Do to datasources
+    \item Select Hypthesis
+    \item Paste API token 
+    \item Import saved annotations
+\end{itemize}
+
+\subsubsection{Quality Assurance}
+For importing annotations to be successful, I need to be able to import at least two sources from Hypothes.is into Open Semantic Search.
+
+\subsection{Text Search}
+As a student, I want my data analysis tool to have a search feature so that I can easily find phrases and words across multiple sources of data.\\
+
+As a student, I should be able to:
+\begin{itemize}
+    \item Open Virtual Box
+    \item Set the shared folder (where data is located)
+    \item Start Open Semantic Desktop Search 
+    \item Use search open to find specific words
+\end{itemize}
+
+\subsubsection{Quality Assurance}
+For text search to be successful, I must be able to search for specific words across at least two sources.
+
+\subsection{Tag Sources}
+As a student, I want my data analysis tool to create tags and add tags to sources so that I can identify patterns.\\
+
+As a student, I should be able to:
+\begin{itemize}
+    \item Start Open Semantic Desktop Search 
+    \item Click on Manage Structure 
+    \item Click add new entry
+    \item Enter name for tag
+    \item Click save
+    \item Go to source
+    \item Click tagging and annotation 
+    \item Go to the tags tab 
+    \item Add appropriate tag to source
+\end{itemize}
+
+\subsubsection{Quality Assurance}
+For tagging in Zotero to be successful, I should be able to create tags and add tags to relevant sources. In addition, I should be able to search for specific tags in order to see all relevant items.
+
+\subsection{Referencing}
+As a student, I want my tool to manage references so that I don't have to manually type my bibliography.
+
+As a student, I should be able to:
+\begin{itemize}
+    \item Download BetterBixtex.xpi: \href{https://github.com/retorquere/zotero-better-bibtex/releases/tag/v5.1.145}{https://github.com/retorquere/zotero-better-bibtex/releases/tag/v5.1.145}
+    \item Open Zotero 
+    \item Click Tools
+    \item Click Addons
+    \item Click Better BibTex 
+    \item Find relevant source 
+    \item Drag and drop source into Overleaf 
+\end{itemize}
+
+\subsection{Quality Assurance}
+For referencing to be successful, I should be able to drag and drop at least two references into Overleaf.
+
+  
+\section{Themes}
+All stories require that Data Storage and Data Organisation is completed before moving onto the following stories. Following this, it would be practical to then complete the Highlight and Annotate stories in order to not only import annotations to OpenSemantic Search, but also to obtain a better grasp of the data in order to tag sources. The Text Search and Tag Sources stories can then be completed in any order. These two stories can compliment each other in numerous ways. For instance, Text Search could be used to identify common themes which could then be used to create a tag. Alternatively, tags could be allocated to sources and then the text search could be used to find specific words within relevant tags. Lastly, the referencing story can be completed at any time as long as the relevant source is located in Zotero. However, it would only be necessary to export a reference once all of the stories have been completed and themes have been identified. 
+
+
+
+
+
+
+\end{document}
